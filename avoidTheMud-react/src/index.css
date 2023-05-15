@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-start {
+  background-image: url("https://image.flaticon.com/icons/svg/60/60993.svg");
+}
+
+.bg-end {
+  background-image: url("https://image.flaticon.com/icons/svg/60/60993.svg");
+}
