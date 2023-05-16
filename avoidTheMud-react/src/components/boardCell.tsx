@@ -24,8 +24,12 @@ const BoardCellComponent = ({
   const bgColor =
     boardCell.color == 'yellow'
       ? 'bg-yellow-300'
+      : boardCell.color == 'yellow-dark'
+      ? 'bg-yellow-700'
       : boardCell.color == 'red'
       ? 'bg-red-300'
+      : boardCell.color == 'red-dark'
+      ? 'bg-red-950'
       : boardCell.type.name == 'mud'
       ? 'bg-yellow-900'
       : 'bg-green-300'

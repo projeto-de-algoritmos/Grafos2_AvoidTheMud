@@ -29,7 +29,10 @@ export function dijkstra(vertexes: Vertex[][], source: Vertex, end: Vertex) {
       break;
 
     unvisited.delete(vertex.id)
-    vertex.color = 'red'
+    if(vertex.type.name == 'mud')
+      vertex.color = 'red-dark'
+    else
+      vertex.color = 'red'
     animationSequence.push(structuredClone(vertex))
 
     // update neighbors cost
@@ -63,7 +66,10 @@ export function dijkstra(vertexes: Vertex[][], source: Vertex, end: Vertex) {
     current = current.parent
   }
   path.reverse().forEach((v) => {
-    v.color = 'yellow'
+    if(v.type.name == 'mud')
+      v.color = 'yellow-dark'
+    else
+      v.color = 'yellow'
     animationSequence.push(v)
   })
 
