@@ -15,6 +15,7 @@
 ## Sobre 
 Esse projeto tem por objetivo a implementação de um simples jogo de labirinto para fortalecer os conhecimentos nos conteúdos aprendidos no módulo de Grafos 2, especialmente o Algoritmo de Dijkstra.
 Nos baseamos em um grid, no qual cada nó é representado por um quadrado no labirinto e inicialmente todos os nós estão conectados caso sejam vizinhos em pontos cardeais (Norte, Sul, Leste, Oeste). O Usuário tem opção de adicionar árvores, logo, as conexões iniciais são quebradas ou adicionar um território de lama (aumenta o custo de se passar por aquela aresta). O Algoritmo mostra no final da execução o caminho de menor custo do ponto de origem ao ponto de chegada baseado no algoritmo citado acima.
+![Vídeo de Apresentação](.assets/apresentacao.mp4)
 
 ## Screenshots
 
