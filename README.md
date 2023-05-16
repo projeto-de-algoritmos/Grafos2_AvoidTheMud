@@ -1,5 +1,8 @@
 # Grafos 2 -> AvoidTheMud
 
+![Versão 2](./assets/screenshot.png)
+
+
 **Número da Lista**: 2<br>
 **Conteúdo da Disciplina**: Grafos 2<br>
 
@@ -23,7 +26,6 @@ Nos baseamos em um grid, no qual cada nó é representado por um quadrado no lab
 
 ### Mapa com Barreiras e Lama
 ![Mapa com Barreiras e Lama](./assets/gif3.gif)
-![Versão 2](./assets/screenshot.png)
 
 ## Instalação 
 **Linguagem**: JavaScripts<br>
