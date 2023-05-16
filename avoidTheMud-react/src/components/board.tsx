@@ -58,9 +58,9 @@ const Board = () => {
 
     console.log('ok')
     for (let i = 0; i < animationSequence.length; i++) {
-      //await timeout(0).then(() => {
-      updateOneCell(animationSequence[i])
-      //})
+      await timeout(0).then(() => {
+        updateOneCell(animationSequence[i])
+      })
     }
     setIsFinished(true)
   }
