@@ -4,6 +4,7 @@ import BoardCellComponent from './boardCell'
 import { dijkstra } from '../graph'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import { FiTarget } from 'react-icons/fi'
+import { VscDebugRestart } from 'react-icons/vsc'
 
 function initBoardCells(width = 60, height = 30) {
   const rows = []
@@ -35,10 +36,16 @@ function timeout(delay: number) {
 const Board = () => {
   const [boardCells, setBoardCells] = React.useState(initBoardCells())
   const [selectedObstacle, setSelectedObstacle] = React.useState('tree')
+  const [isFinished, setIsFinished] = React.useState(false)
 
   function updateOneCell(boardCell: BoardCell) {
     boardCells[boardCell.position.x][boardCell.position.y] = boardCell
     setBoardCells([...boardCells])
+  }
+
+  function resetTheBoard() {
+    setBoardCells(initBoardCells())
+    setIsFinished(false)
   }
 
   async function startAlgorithm() {
@@ -49,11 +56,13 @@ const Board = () => {
       boardCellsClone[14][54]
     )
 
+    console.log('ok')
     for (let i = 0; i < animationSequence.length; i++) {
       await timeout(0).then(() => {
         updateOneCell(animationSequence[i])
       })
     }
+    setIsFinished(true)
   }
 
   return (
@@ -105,12 +114,22 @@ const Board = () => {
               <span>Tree</span>
             </div>
           </button>
-          <button
-            className="bg-orange-300 hover:bg-orange-400 rounded px-7 py-1"
-            onClick={() => startAlgorithm()}
-          >
-            Start
-          </button>
+          {isFinished ? (
+            <button
+              className="bg-sky-500 hover:bg-sky-600 rounded px-7 py-1"
+              onClick={() => resetTheBoard()}
+            >
+              <VscDebugRestart className="inline-block mr-2" />
+              Restart
+            </button>
+          ) : (
+            <button
+              className="bg-orange-300 hover:bg-orange-400 rounded px-7 py-1"
+              onClick={() => startAlgorithm()}
+            >
+              Start
+            </button>
+          )}
         </div>
       </div>
       <table className="w-full h-3/5">
