@@ -15,6 +15,15 @@ Nos baseamos em um grid, no qual cada nó é representado por um quadrado no lab
 
 ## Screenshots
 
+### Mapa sem barreiras e sem lama
+![Parte de Execução do Programa](./assets/gif1.gif)
+
+### Mapa com Barreiras
+![Mapa com Barreiras](./assets/gif2.gif)
+
+### Mapa com Barreiras e Lama
+![Mapa com Barreiras e Lama](./assets/gif3.gif)
+![Versão 2](./assets/screenshot.png)
 
 ## Instalação 
 **Linguagem**: JavaScripts<br>
